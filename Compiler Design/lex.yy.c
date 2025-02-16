@@ -282,11 +282,12 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 4
-#define YY_END_OF_BUFFER 5
-static yyconst short int yy_accept[11] =
+#define YY_NUM_RULES 5
+#define YY_END_OF_BUFFER 6
+static yyconst short int yy_accept[12] =
     {   0,
-        0,    0,    5,    3,    3,    2,    1,    2,    1,    0
+        0,    0,    6,    3,    4,    3,    2,    1,    0,    2,
+        0
     } ;
 
 static yyconst int yy_ec[256] =
@@ -295,16 +296,16 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
-        1,    1,    1,    1,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        1,    1,    1,    5,    4,    1,    4,    4,    4,    4,
+        1,    1,    1,    1,    1,    3,    1,    4,    4,    4,
+        4,    4,    4,    4,    4,    4,    4,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
 
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -321,33 +322,33 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[6] =
+static yyconst int yy_meta[5] =
     {   0,
-        1,    1,    2,    3,    1
+        1,    1,    1,    2
     } ;
 
-static yyconst short int yy_base[15] =
+static yyconst short int yy_base[13] =
     {   0,
-        8,    0,    4,   14,    0,    0,    0,    0,    0,   14,
-        5,    7,    0,    9
+        0,    0,    8,    9,    9,    0,    2,    0,    0,    0,
+        9,    5
     } ;
 
-static yyconst short int yy_def[15] =
+static yyconst short int yy_def[13] =
     {   0,
-       11,   11,   10,   10,   12,   13,   14,   13,   14,    0,
-       10,   10,   10,   10
+       11,    1,   11,   11,   11,   12,   11,   12,   12,    7,
+        0,   11
     } ;
 
-static yyconst short int yy_nxt[20] =
+static yyconst short int yy_nxt[14] =
     {   0,
-       10,    8,    6,   10,    5,    4,    4,    4,    7,    7,
-        9,    9,    5,    3,   10,   10,   10,   10,   10
+        4,    5,    6,    7,    9,   10,    8,   11,    3,   11,
+       11,   11,   11
     } ;
 
-static yyconst short int yy_chk[20] =
+static yyconst short int yy_chk[14] =
     {   0,
-        0,   13,    2,    3,    2,   11,   11,   11,   12,   12,
-       14,   14,    1,   10,   10,   10,   10,   10,   10
+        1,    1,    1,    1,    7,    7,   12,    3,   11,   11,
+       11,   11,   11
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -361,11 +362,11 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 ".\\Identifier.l"
+#line 1 ".\\FloatingPoint.c"
 #define INITIAL 0
-#line 2 ".\\Identifier.l"
+#line 2 ".\\FloatingPoint.c"
     #include <stdio.h>
-#line 369 "lex.yy.c"
+#line 370 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -508,9 +509,6 @@ YY_MALLOC_DECL
 #endif
 
 #define YY_RULE_SETUP \
-	if ( yyleng > 0 ) \
-		yy_current_buffer->yy_at_bol = \
-				(yytext[yyleng - 1] == '\n'); \
 	YY_USER_ACTION
 
 YY_DECL
@@ -519,9 +517,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 5 ".\\Identifier.l"
+#line 5 ".\\FloatingPoint.c"
 
-#line 525 "lex.yy.c"
+#line 523 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -560,7 +558,6 @@ YY_DECL
 		yy_bp = yy_cp;
 
 		yy_current_state = yy_start;
-		yy_current_state += YY_AT_BOL();
 yy_match:
 		do
 			{
@@ -573,13 +570,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 11 )
+				if ( yy_current_state >= 12 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 14 );
+		while ( yy_base[yy_current_state] != 9 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -607,25 +604,30 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 ".\\Identifier.l"
-{printf("Identifier\n");}   
+#line 6 ".\\FloatingPoint.c"
+{printf("Floating point number\n");}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 ".\\Identifier.l"
-{printf("Not a Identifier\n");}
+#line 7 ".\\FloatingPoint.c"
+{printf("Integer\n");}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 8 ".\\Identifier.l"
-exit(0); 
+#line 8 ".\\FloatingPoint.c"
+{printf("Not a floating point number\n");}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 9 ".\\Identifier.l"
+#line 9 ".\\FloatingPoint.c"
+exit(0);
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 10 ".\\FloatingPoint.c"
 ECHO;
 	YY_BREAK
-#line 629 "lex.yy.c"
+#line 631 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -905,7 +907,6 @@ static yy_state_type yy_get_previous_state()
 	register char *yy_cp;
 
 	yy_current_state = yy_start;
-	yy_current_state += YY_AT_BOL();
 
 	for ( yy_cp = yytext_ptr + YY_MORE_ADJ; yy_cp < yy_c_buf_p; ++yy_cp )
 		{
@@ -918,7 +919,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 11 )
+			if ( yy_current_state >= 12 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -953,11 +954,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 11 )
+		if ( yy_current_state >= 12 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 10);
+	yy_is_jam = (yy_current_state == 11);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1076,7 +1077,6 @@ static int input()
 	*yy_c_buf_p = '\0';	/* preserve yytext */
 	yy_hold_char = *++yy_c_buf_p;
 
-	yy_current_buffer->yy_at_bol = (c == '\n');
 
 	return c;
 	}
@@ -1513,11 +1513,11 @@ int main()
 	return 0;
 	}
 #endif
-#line 9 ".\\Identifier.l"
+#line 10 ".\\FloatingPoint.c"
 
 
 int main() {
-    printf("Enter string you want to check ");
+    printf("Enter a number to check weather it ismfloating point number or not ");
     yylex();
 
     return 0;
@@ -1526,5 +1526,3 @@ int main() {
 int yywrap() {
     return 1;
 }
-
-

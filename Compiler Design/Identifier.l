@@ -2,11 +2,10 @@
     #include <stdio.h>
 %}
 
-%%
-// Ignore spaces and newlines
-[\t\n ] {/* Do nothing */}  
-[a-zA-Z_][a-zA-Z0-9_]* {printf("It is a valid identifier\n");}
-[^a-zA-Z_] {printf("It is not a valid identifier\n");}
+%% 
+(^[a-zA-Z0-9_][a-zA-Z0-9_]*) {printf("Identifier\n");}   
+^[0-9]+ {printf("Not a Identifier\n");}
+.|\n exit(0); 
 %%
 
 int main() {

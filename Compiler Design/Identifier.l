@@ -3,14 +3,16 @@
 %}
 
 %% 
-(^[a-zA-Z0-9_][a-zA-Z0-9_]*) {printf("Identifier\n");}   
+^[a-zA-Z_][a-zA-Z0-9_]* {printf("Identifier\n");}   
 ^[0-9]+ {printf("Not a Identifier\n");}
-.|\n exit(0); 
+\n {return 0;}
 %%
 
 int main() {
     printf("Enter string you want to check ");
     yylex();
+    
+    exit(0);
 
     return 0;
 }

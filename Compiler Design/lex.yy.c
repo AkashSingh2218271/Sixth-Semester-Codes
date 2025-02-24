@@ -284,9 +284,9 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 
 #define YY_NUM_RULES 4
 #define YY_END_OF_BUFFER 5
-static yyconst short int yy_accept[9] =
+static yyconst short int yy_accept[8] =
     {   0,
-        0,    0,    5,    4,    2,    3,    1,    0
+        0,    0,    5,    3,    2,    1,    0
     } ;
 
 static yyconst int yy_ec[256] =
@@ -295,16 +295,16 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    4,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
-        1,    1,    1,    1,    5,    5,    5,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        1,    1,    1,    1,    1,    1,    5,    5,    5,    5,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    5,    1,    1,    1,    5,    1,
+        1,    1,    5,    1,    1,    1,    1,    1,    5,    1,
+        1,    1,    1,    1,    5,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    5,    1,    1,    1,
 
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        5,    5,    1,    1,    1,    1,    1,    1,    1,    1,
+        5,    1,    1,    1,    5,    1,    1,    1,    1,    1,
+        5,    1,    1,    1,    1,    1,    5,    1,    1,    1,
+        1,    1,    1,    5,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -326,26 +326,26 @@ static yyconst int yy_meta[6] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst short int yy_base[9] =
+static yyconst short int yy_base[8] =
     {   0,
-        0,    0,    6,    7,    7,    7,    7,    7
+        0,    0,    6,    7,    7,    7,    7
     } ;
 
-static yyconst short int yy_def[9] =
+static yyconst short int yy_def[8] =
     {   0,
-        8,    1,    8,    8,    8,    8,    8,    0
+        7,    1,    7,    7,    7,    7,    0
     } ;
 
 static yyconst short int yy_nxt[13] =
     {   0,
-        4,    5,    5,    6,    7,    8,    3,    8,    8,    8,
-        8,    8
+        4,    5,    5,    5,    6,    7,    3,    7,    7,    7,
+        7,    7
     } ;
 
 static yyconst short int yy_chk[13] =
     {   0,
-        1,    1,    1,    1,    1,    3,    8,    8,    8,    8,
-        8,    8
+        1,    1,    1,    1,    1,    3,    7,    7,    7,    7,
+        7,    7
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -359,11 +359,11 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 ".\\File_element_count.l"
+#line 1 ".\\vowels_consonant_count.l"
 #define INITIAL 0
-#line 2 ".\\File_element_count.l"
+#line 2 ".\\vowels_consonant_count.l"
     #include <stdio.h>
-    int space_count = 0, word_count = 0, char_count = 0;
+    int vowels_count = 0, consonant_count = 0;
 #line 368 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
@@ -515,7 +515,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 6 ".\\File_element_count.l"
+#line 6 ".\\vowels_consonant_count.l"
 
 #line 521 "lex.yy.c"
 
@@ -568,7 +568,7 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 9 )
+				if ( yy_current_state >= 8 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -602,22 +602,22 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 7 ".\\File_element_count.l"
-{char_count++;}
+#line 7 ".\\vowels_consonant_count.l"
+{vowels_count++;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 ".\\File_element_count.l"
-{word_count++;}
+#line 8 ".\\vowels_consonant_count.l"
+{consonant_count;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 9 ".\\File_element_count.l"
-{word_count++; space_count++;  char_count++;}
+#line 9 ".\\vowels_consonant_count.l"
+{consonant_count++;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 10 ".\\File_element_count.l"
+#line 10 ".\\vowels_consonant_count.l"
 ECHO;
 	YY_BREAK
 #line 624 "lex.yy.c"
@@ -912,7 +912,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 9 )
+			if ( yy_current_state >= 8 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -947,11 +947,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 9 )
+		if ( yy_current_state >= 8 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 8);
+	yy_is_jam = (yy_current_state == 7);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1506,17 +1506,15 @@ int main()
 	return 0;
 	}
 #endif
-#line 10 ".\\File_element_count.l"
+#line 10 ".\\vowels_consonant_count.l"
 
 
 int main() {
     // Extern file *yyin, *yyout;
-    yyin = fopen("file.txt", "r");
-    //("Enter a string to check ");
+    yyin = fopen("vowelAndCons.txt", "r");
     yylex();
-    printf("Number of space in file is %d\n", space_count);
-    printf("Number of word in file is %d\n", ++word_count);
-    printf("Number of character in file is %d\n", char_count);
+    printf("Number of vowels in file is %d\n", vowels_count);
+    printf("Number of consonant in file is %d\n", consonant_count);
 
     return 0;
 }
